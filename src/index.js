@@ -1,6 +1,7 @@
-import validator from './validator.js';
 
-console.log(validator);
+
+//  import validator from './validator.js';
+//  console.log(validator);
 
 const tarjeta = document.querySelector('#tarjeta'),
 	  btnAbrirFormulario = document.querySelector('#btn-abrir-formulario'),
