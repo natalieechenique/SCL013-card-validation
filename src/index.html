@@ -1,14 +1,135 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <script src="index.js" type="module"></script>
-  </body>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name=" viewport " content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <title>EasyPay</title>
+
+  <style>
+    div {
+      padding: 1cm;
+      background-color: rgb(255, 255, 255);
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+
+ <div id="bienvenido" class="">
+  <h1>¡Bienvenido a EasyPay!</h1>
+    <!--TITULO-->
+   <p>Paga tus cuentas de forma fácil y segura</p>
+    <!--SUBTITULO INICIO PAGINA--><br><br>
+   <button onClick="seleccionarIngresar()" class="boton-aceptar">Ingresar</button>
+   <button onClick="seleccionarRegistrarse()"class="boton-aceptar">Registrarse</button>
+  </div>
+
+
+
+  <!--INGRESO-->
+  <div class="div-sesion oculto" id="entrarUsuario">
+  <label for="email">Correo electrónico</label>
+    <input type="text" id="email" name="email"><br>
+
+    <label for="contraseña">Contraseña</label><br>
+    <input type="text" id="contraseña" name="contraseña"><br>
+
+
+    <button onClick= "botonEnviarIngreso()" class="boton-aceptar">Enviar</button>
+    <button onClick= "botonCancelarIngreso()" class="boton-cancel">Cancelar</button>
+  </div> <!--ENVIAR DATOS USUARIO INGRESO-->
+ 
+</div>
+
+
+   <!--DIV BIENVENIDA USUARIO SESION-->
+<div id="holaUsuario" class= "hola-usuario oculto"> Hola
+<button onClick= "botonSalirUsuario()" class="boton-cancel"> Salir </button></div>
+      
+
+
+                                                                           
+  <!--REGISTRO-->
+ <div class="div-registro oculto" id="registroUsuario">
+ <label for="name">Nombre</label>
+ <input type="text" id="name" name="name"><br>
+
+  <label for="rut">Rut</label>
+  <input type="text" id="rut" name="name"><br>
+  
+   <label for="email">Correo electrónico</label>
+ <input type="text" id="email" name="name"><br>
+
+    <label for="contraseña">Crear contraseña</label><br>
+    <input type="text" id="contraseña" name="name"><br>
+
+    <label for="rcontraseña">Repetir contraseña</label>
+    <input type="text" id="rcontraseña" name="name"><br>
+
+    <button onClick= "botonIngresoTarj()" class="boton-aceptar">Siguiente</button>
+    <button onClick= "botonCancelarRegistro()" class="boton-cancel">Cancelar</button>
+  </div>
+  
+
+
+
+   <!--TARJETA-->
+   <div class="div-registroTarj oculto" id="registroTarj">Registro de tarjetas comerciales
+    <button onClick= "botonRegistroTarj()" class= "boton-aceptar">Siguiente</button> 
+      <button onClick= "botonCancelarRegTarj()" class="boton-cancel">Cancelar</button>
+   </div>
+  <!--BOTON ESPECIAL PARA INGRESAR TARJETAS COMERCIALES DENTRO DEL FORMULARIO DE REGISTRO-->
+  
+
+  
+  <!------------------------------------------------------------>
+  <!--ACA DEBERIA IR UN DIV ESPECIAL PARA VALIDAR LA TARJETA DE CREDITO CON SU BOTON ENVIAR/VALIDAR-->
+
+  <div class="div-validar-tarjetaC oculto" id="validarTarjetaC"> Registro de tarjetas 
+  <label for="numtarjeta">Número de tarjeta de crédito (solo digitos 0-9)</label>
+    <input type="text" id="numtarjeta" name="numtarjeta"><br>
+
+    <label for="codigo">Código de verificación (3 dígitos)</label>
+    <input type="text" id="vname" name="codigo"><br>
+
+    <button onClick="botonValidarT()" class="boton-aceptar">Validar</button> 
+      <button onClick="botonCancelValT()" class="boton-cancel"> Cancelar</button> 
+        </div>
+     
+
+
+  <!--ENVIAR DATOS USUARIO-->
+  
+
+  <!--ACA deberia ir un alert o mensaje con su div-->
+  <div class="alert-numok oculto" id="alertOK">
+    Tu tarjeta "XXXXXXXXX4567" ha sido validada exitosamente </div>
+
+  <div class="alert-num-error oculto" id="alertNumError">
+    Error en número de tarjeta (solo digitos 0-9)
+  </div>
+  <!--"XXXXXXXXX4567" (formato para mostrar alert)-->
+
+  <div class="alert-cod-error oculto" id="alertCodError">
+    Error en código de verificación (3 dígitos)
+  </div>
+  <br>
+  <div class= "oculto">
+    <button onClick= "botonOk()" class= "boton-aceptar"> Ok</button>
+  <!--OK PARA VOLVER AL FORMULARIO GENERAL CON TARJETA VALIDADA-->
+ <button onClick= "botonReint()" class= "boton-cancel"> Reintentar</button></div>
+</div> <!--BOTON PARA INGRESAR NUEVAMENTE LOS NUMEROS (CONFIRMAR SI ES ALERT O DA EL ERROR AL MOMENTO DE TYPEARLOS)-->
+   
+      
+<script type="text/javascript" src="index.js"></script>
+    
+</body>
+</div>
 </html>
