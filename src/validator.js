@@ -10,5 +10,3 @@ const validator = {
         console.log("Este es el numero de tarjeta enmascarada "+ mascara);
         //document.write("Tu numero de tarjeta de credito termina en " + mascara);  
         return mascara;
-    },
-    

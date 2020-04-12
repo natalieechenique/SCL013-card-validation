@@ -22,7 +22,9 @@
   main form p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0px;
-    color: #fff;
+    color: black;
+    justify-content: center;
+
   }
   
   main form p.L1 {
@@ -43,12 +45,13 @@
     margin: 20px;
     text-align: center;
     justify-content:center ;
+    contain: content;
   }
   
   .formulario input {
     width: 420px;
     padding: 10px;
-    border-color: rgb(141, 132, 132);
+    border-color:black;
     margin-bottom: 10px;
     font-size: 18px;
     border-radius: 10px;
@@ -66,7 +69,7 @@
     color: white;
     background-color:black;
     justify-content: center;
-    text-align: center;
+    text-align: justify;
    
 
    ;
@@ -81,6 +84,7 @@
     color: white;
     background-color: #fc5f67;
     justify-content: center;
+    background-position-y: center; ;
     
   }
   
@@ -127,6 +131,7 @@
     background-color: #fc5f67;
     padding: 13px 18px;
     border-radius: 5px;
+    
   }
   
   /*Formato del header*/
