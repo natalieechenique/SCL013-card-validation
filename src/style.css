@@ -1,156 +1,142 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:Arial, Helvetica, sans-serif
   }
-  
+   body {
+    background: rgba(255, 255, 255, 0.979);
+      font-size:30px;
+      justify-content: center;
+      text-align: center
+    
+    }
   /*Formulario*/
-  .container {
-    padding: 10px;
-    justify-content: center;
-    
-  }
-  
-  /*Fondo del Cuerpo del sitio*/
-  body {
-    margin: auto;
-    justify-content: center;
-    background-color: rgba(125, 227, 211, 0.954)
-   
-  }
-  /*Textos del Formulario*/
-  main form p {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: 0px;
-    color: black;
-    justify-content: center;
+.contenedor {
+  padding: 10px;
+  text-align: center;
+}
 
-  }
-  
-  main form p.L1 {
-    font-size: 30px;
-    margin-bottom: 15px;
-  }
-  main form p.L2 {
-    font-size: 16px;
-  }
-  main form p.L3 {
-    font-size: 16px;
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .formulario {
-    padding: 20px;
-    margin: 20px;
-    text-align: center;
-    justify-content:center ;
-    contain: content;
-  }
-  
-  .formulario input {
-    width: 420px;
-    padding: 10px;
-    border-color:black;
-    margin-bottom: 10px;
-    font-size: 18px;
-    border-radius: 10px;
-    border-style: solid;
-    justify-items: center;
-  }
-  
-  /*Boton*/
-  input.btn {
-    border-top-style: center;
-    font-size: 20px;
-    padding: 13px 13px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    background-color:black;
-    justify-content: center;
-    text-align: justify;
-   
+/*Fondo del Cuerpo del sitio*/
+body {
+  margin: auto;
+  background-color: darkgray;
+  background-image: url(../imagen/fondo.jpg);
+}
+/*Textos del Formulario*/
+main form p {
+  font-family: "Trebuchet MS", Geneva, Arial, Helvetica, sans-serif;
+  margin: 0px;
+  color: #fff;
+}
 
-   ;
-    
-  }
-  /*Evento del Boton*/
-  input.btn:hover {
-    font-size: 22px;
-    padding: 10px 18px;
-    border-radius: 5px;
-    text-decoration: none;
-    color: white;
-    background-color: #fc5f67;
-    justify-content: center;
-    background-position-y: center; ;
-    
-  }
-  
-  /* Margenes laterales de la cabecera*/
-  .cabecera {
-    width: 90%;
-    margin: auto;
-  }
-  
-  /* Cabecera del sitio*/
-  header {
-    padding: 30px 0;
-    background: #1abc9c; /* green background */
-    color: white; /* white text color */
-    justify-content: center;
+main form p.L1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+main form p.L2 {
+  font-size: 16px;
+}
+main form p.L3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
 
-;
-  }
-  
-  /*Alineacion del Boton Iniciar sesion*/
-  nav {
-    padding-top: 12px;
-  }
-  
-  /* Boton de Iniciar sesion */
-  nav a {
-    margin-left: 15px;
-    font-size: 22px;
-    padding: 10px 18px;
-    border-radius: 5px;
-  }
-  
-  /*Color y fondo de los botones*/
-  header nav a {
-    text-decoration: none;
-    color: white;
-    background-color: black;
-  }
-  
-  /* Evento del mouse sobre el boton*/
-  header nav a:active,
-  header nav a:hover {
-    color: white;
-    background-color: #fc5f67;
-    padding: 13px 18px;
-    border-radius: 5px;
-    
-  }
-  
-  /*Formato del header*/
-  header .cabecera {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  h1 {
-    color:white;
-    font-size: 20px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-  
-  /*Pie de pagina*/
-  footer {
-    color: #fff;
-    font-size: 15px;
-    background-color: #000000;
-    padding: 20px;
-    text-align: right;
-  }
+.formulario {
+  padding: 20px;
+  margin: 20px;
+}
+
+.formulario input {
+  width: 420px;
+  padding: 10px;
+  border-color: rgb(141, 132, 132);
+  margin-bottom: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  border-style: solid;
+}
+
+/*Boton*/
+input.btn {
+  font-size: 22px;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #e50914;
+}
+/*Evento del Boton*/
+input.btn:hover {
+  font-size: 22px;
+  padding: 10px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  background-color: #fc5f67;
+}
+
+/* Margenes laterales de la cabecera*/
+.cabecera {
+  width: 90%;
+  margin: auto;
+}
+
+/* Cabecera del sitio*/
+header {
+  padding: 30px 0;
+  background-color: black;
+}
+
+/*Alineacion del Boton Iniciar sesion*/
+nav {
+  padding-top: 12px;
+}
+
+/* Boton de Iniciar sesion */
+nav a {
+  margin-left: 15px;
+  font-size: 22px;
+  padding: 10px 18px;
+  border-radius: 5px;
+}
+
+/*Color y fondo de los botones*/
+header nav a {
+  text-decoration: none;
+  color: white;
+  background-color: #e50914;
+}
+
+/* Evento del mouse sobre el boton*/
+header nav a:active,
+header nav a:hover {
+  color: white;
+  background-color: #fc5f67;
+  padding: 13px 18px;
+  border-radius: 5px;
+}
+
+/*Formato del header*/
+header .cabecera {
+  display: flex;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #e50914;
+  font-size: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Pie de pagina*/
+footer {
+  color: #fff;
+  font-size: 15px;
+  background-color: #000000;
+  padding: 20px;
+  text-align: right;
+}
+
+
+
