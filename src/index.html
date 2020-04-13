@@ -8,9 +8,8 @@
   </head>
   <header class="header">
       <div class="cabecera">
-        <img src="C:\Users\natal\OneDrive\Escritorio\Proyectos Laboratoria\logo EP.png"
-         width="100" height="50" alt="EasyPay"> 
-    
+        <img src="C:\Users\natal\OneDrive\Imágenes\logo EP"
+    width="100" height="50" alt="EasyPay">
         <h1 class="logo">
         <nav>
           <a href="#">Inicia sesión</a>
@@ -21,11 +20,13 @@
     </header>
 
    <body>
+   prueba2
     <img src="C:\Users\natal\OneDrive\Escritorio\Proyectos Laboratoria\logos tarjetas.png"
     width="180" height="30" alt="Aceptamos todas las tarjetas">
       <main class=""> 
       <section class= "bienvenida" id="bienvenido">
         <h1>Bienvenido a EasyPay</h1> 
+
  <span>¡Paga tus cuentas de forma fácil y segura!</span>
 
   <button onclick="seleccionarRegistro()" class="btn btnPrimary" id="seleccionarRegistro"> Registrarse </button>
@@ -36,6 +37,10 @@
 
  
 <!--FORMULARIO REGISTRO------------------------------------>
+
+
+
+ 
 
   <section class = "oculto" id="registroUsuario">
   <div class= "registro-usuario">
@@ -56,7 +61,10 @@
   <input type="text" id="rclave" name="rclave"></p>
        
 
+
 <button onclick="irFormularioTarjeta()"  class="btn btnPrimary" id="irFormularioTarjeta"> Aceptar </button>
+
+
 <button onclick="cancelFormularioTarjeta()" class="btnCancel" id="cancelFormularioTarjeta"> Cancelar </button>
 
 </div>
@@ -71,10 +79,12 @@
 <!---FORMULARIO TARJETA CON FUNCION--->
 
 
+
 <section class= "formulario-tarjeta oculto" id="formulario-tarjeta">
 <span>Valida tu tarjeta</span>
 
 <img src="C:\Users\natal\OneDrive\Escritorio\Proyectos Laboratoria\tarjetascolores.png" height="100" width="300"> 
+
 
 
   <div class="grupo">
@@ -90,7 +100,9 @@
         <label for="selectMes">Expiración</label>
         <div class="flexbox">
           <div class="grupo-select">
+
             <select name="mes" id="selectMes" class="select">
+
                <option disabled selected>Mes</option>
                 <option>1</option>
                 <option>2</option>
@@ -108,6 +120,7 @@
             <i class="fas fa-angle-down"></i>
           </div>
           <div class="grupo-select">
+
             <select name="year" id="selectYear" class="select">
               <option disabled selected>Año</option>
               <option>2020</option>
@@ -116,6 +129,8 @@
                 <option>2023</option>
                 <option>2024</option>
                 <option>2025</option>
+
+
             </select>
             <i class="fas fa-angle-down"></i>
           </div>
@@ -124,11 +139,13 @@
 
       <div class="grupo ccv">
         <label for="inputCCV">CCV</label>
+
         <input type="text" id="inputCCV" class="ccv" maxlength="3">
       </div>
     </div>
     <button onclick="testvalidation()" class="btn btnPrimary">Validar</button>
     <button onclick="testcancel()" class="btn btn btnCancel">Cancelar</button>
+
   </div>
 
 </section>
