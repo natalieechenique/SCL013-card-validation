@@ -1,44 +1,140 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="utf-8">
-  <meta name=" viewport " content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>EasyPay</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <body>
-    <header class="header">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>formulario tarjFunc</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <header class="header">
       <div class="cabecera">
-        <img src="../img/logos/logoeasy1.png">
-        <h1 class="logo"><i>Paga tus cuentas de forma fácil y segura</i></h1>
+        <img src="C:\Users\natal\OneDrive\Imágenes\logo EP"
+    width="100" height="50" alt="EasyPay">
+        <h1 class="logo">
         <nav>
-          <a href="#">Crear una cuenta</a>
+          <a href="#">Inicia sesión</a>
           <a href="#">Contacto</a>
         </nav>
       </div>
+       </div>
     </header>
-    <main class="main">
-      <div class="container">
-        <form id="formulario" class="formulario">
-          <p class="L1">Datos de la Tarjeta</p>
-          <input type="text" placeholder="Nombre" /><br>
-          <input type="text" placeholder="Apellido" /><br>
-          <input type="number" placeholder="Número de Tarjeta" id="tdc" maxlength="16" /><br>
-          <input type="text" placeholder="Fecha de Vencimiento" /><br>
-          <input type="text" placeholder="CVC" /><br>
-        </form>
-        <input class="btn" type="button" value="Ingresar" id="validar" />
-      </div>
-    </main>
-    <footer>
-      <div class="footer">
-        <p> Creado por Nathalie y Jeniffer para LABORATORIA</p>
-      </div>
-    </footer>
-    <script src="style.css.css" type="module"></script>
-  </body>
-  </html>
+
+   <body>
+     
+      <main class=""> 
+      <section class= "bienvenida" id="bienvenido">
+        <h1>Bienvenido a EasyPay</h1>
+ <span>¡Paga tus cuentas de forma fácil y segura!</span>
+
+  <button onclick="seleccionarRegistro()" class="btn btnPrimary" id="seleccionarRegistro"> Registrarse </button>
+
+  </section>
+
+  </div>
+
+ 
+<!--FORMULARIO REGISTRO------------------------------------>
+ 
+  <section class = "oculto" id="registroUsuario">
+  <div class= "registro-usuario">
+<span>Ingresa tus datos</span>
+  <p><label for="rname">Nombre completo</label>
+  <input type="text" id="rname"></p> 
+
+   <p><label for="email">Email</label>
+  <input type="text" id="email"> </p>
+
+  <p><label for="rut">Rut</label>
+ <input type="text" id="rut" name="rut"></p>
   
+  <p><label for="clave">Crear contraseña</label>
+    <input type="text" id="clave" name="clave"></p>
+  
+  <p><label for="rcontraseña">Repetir contraseña</label>
+  <input type="text" id="rclave" name="rclave"></p>
+       
+
+<button onclick="irFormularioTarjeta()"  class="btnAcept" id="irFormularioTarjeta"> Aceptar </button>
+<button onclick="cancelFormularioTarjeta()" class="btnCancel" id="cancelFormularioTarjeta"> Cancelar </button>
+
+</div>
+    </div>
+       </section>
+
+<!-----<  button onclick= "reintTarjForm()" id="reinTarjForm"
+  class="btnAcept">Reintentar</button> 
+  ESTO CUANDO SALGA EL PROMPT O ALERT Y HAY QUE REINTENTAR LA VALIDACION------------------------------>
+  
+
+<!---FORMULARIO TARJETA CON FUNCION--->
+
+<section class= "formulario-tarjeta oculto" id="formulario-tarjeta">
+<span>Valida tu tarjeta</span>
+  
+  <div class="grupo">
+      <label for="inputNumero">Número Tarjeta</label>
+      <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+    </div>
+    <div class="grupo">
+      <label for="inputNombre">Nombre</label>
+      <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+    </div>
+    <div class="flexbox">
+      <div class="grupo expira">
+        <label for="selectMes">Expiración</label>
+        <div class="flexbox">
+          <div class="grupo-select">
+            <select name="mes" id="selectMes">
+               <option disabled selected>Mes</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+            </select>
+            <i class="fas fa-angle-down"></i>
+          </div>
+          <div class="grupo-select">
+            <select name="year" id="selectYear">
+              <option disabled selected>Año</option>
+              <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+            </select>
+            <i class="fas fa-angle-down"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="grupo ccv">
+        <label for="inputCCV">CCV</label>
+        <input type="text" id="inputCCV" maxlength="3">
+      </div>
+    </div>
+    <button onclick="testvalidation()" class="btn btnPrimary">Validar</button>
+  </div>
+
+</section>
+
+</main>
+
+   
+    	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+
+
+  </body>
+
+  <footer> 
+    Hecho por Natalie y Jeniffer para LABORATORIA 2020</footer>
+</html>
