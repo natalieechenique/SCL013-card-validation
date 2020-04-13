@@ -1,141 +1,83 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>formulario tarjFunc</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <header class="header">
+      <div class="cabecera">
+        <img src="C:\Users\natal\OneDrive\Escritorio\Proyectos Laboratoria\logo EP.png"
+         width="100" height="50" alt="EasyPay"> 
+    
+        <h1 class="logo">
+        <nav>
+          <a href="#">Inicia sesión</a>
+          <a href="#">Contacto</a>
+        </nav>
+      </div>
+       </div>
+    </header>
 
-<head>
+   <body>
+    <img src="C:\Users\natal\OneDrive\Escritorio\Proyectos Laboratoria\logos tarjetas.png"
+    width="180" height="30" alt="Aceptamos todas las tarjetas">
+      <main class=""> 
+      <section class= "bienvenida" id="bienvenido">
+        <h1>Bienvenido a EasyPay</h1>
+ <span>¡Paga tus cuentas de forma fácil y segura!</span>
 
-  <meta charset="utf-8">
-  <meta name=" viewport " content="width=device-width, initial-scale=1.0">
-  <title>EasyPay, formulario de tarjeta de crédito dinámico</title>
-  <link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
- 
-</head>
+  <button onclick="seleccionarRegistro()" class="btn btnPrimary" id="seleccionarRegistro"> Registrarse </button>
 
+  </section>
 
-<body>
-
-
- <div id="bienvenido" class="">
-  <h1>¡Bienvenido a EasyPay!</h1>
-    <!--TITULO-->
-   <p>Paga tus cuentas de forma fácil y segura</p>
-    <!--SUBTITULO INICIO PAGINA--><br><br>
-   <button onClick="seleccionarIngresar()" class="boton-aceptar">Ingresar</button>
-   <button onClick="seleccionarRegistrarse()"class="boton-aceptar">Registrarse</button>
   </div>
 
-
-
-  <!--INGRESO-->
-  <div class="div-sesion oculto" id="entrarUsuario">
-  <label for="email">Correo electrónico</label>
-    <input type="text" id="email" name="email"><br>
-
-    <label for="contraseña">Contraseña</label><br>
-    <input type="text" id="contraseña" name="contraseña"><br>
-
-
-    <button onClick= "botonEnviarIngreso()" class="boton-aceptar">Enviar</button>
-    <button onClick= "botonCancelarIngreso()" class="boton-cancel">Cancelar</button>
-  </div> <!--ENVIAR DATOS USUARIO INGRESO-->
  
+<!--FORMULARIO REGISTRO------------------------------------>
+
+  <section class = "oculto" id="registroUsuario">
+  <div class= "registro-usuario">
+<span>Ingresa tus datos</span>
+  <p><label for="rname">Nombre completo</label>
+  <input type="text" id="rname"></p> 
+
+   <p><label for="email">Email</label>
+  <input type="text" id="email"> </p>
+
+  <p><label for="rut">Rut</label>
+ <input type="text" id="rut" name="rut"></p>
+  
+  <p><label for="clave">Crear contraseña</label>
+    <input type="text" id="clave" name="clave"></p>
+  
+  <p><label for="rcontraseña">Repetir contraseña</label>
+  <input type="text" id="rclave" name="rclave"></p>
+       
+
+<button onclick="irFormularioTarjeta()"  class="btn btnPrimary" id="irFormularioTarjeta"> Aceptar </button>
+<button onclick="cancelFormularioTarjeta()" class="btnCancel" id="cancelFormularioTarjeta"> Cancelar </button>
+
 </div>
-
-
-   <!--DIV BIENVENIDA USUARIO SESION-->
-<div id="holaUsuario" class= "hola-usuario oculto"> Hola
-<button onClick= "botonSalirUsuario()" class="boton-cancel"> Salir </button></div>
-      
-
-
-                                                                           
-  <!--REGISTRO-->
- <div class="div-registro oculto" id="registroUsuario">
- <label for="rname">Nombre</label>
- <input type="text" id="rname" name="rname"><br>
-
-  <label for="rut">Rut</label>
-  <input type="text" id="rut" name="rut"><br>
-  
-   <label for="email">Correo electrónico</label>
- <input type="text" id="email" name="email"><br>
-
-    <label for="contraseña">Crear contraseña</label><br>
-    <input type="text" id="contraseña" name="contraseña"><br>
-
-    <label for="rcontraseña">Repetir contraseña</label>
-    <input type="text" id="rcontraseña" name="rcontraseña"><br>
-
-    <button onClick= "botonIngresoTarj()" class="boton-aceptar"> Siguiente</button>
-    <button onClick= "botonCancelarRegistro()" class="boton-cancel"> Cancelar</button>
-  </div>
-  
-
-
-   <!--TARJETA-->
-   <div class="div-registroTarj oculto" id="registroTarj">Registro de tarjetas comerciales
-    <button onClick= "botonRegistroTarj()" class= "boton-aceptar">Siguiente</button> 
-      <button onClick= "botonCancelarRegTarj()" class="boton-cancel">Cancelar</button>
-   </div>
-  <!--BOTON ESPECIAL PARA INGRESAR TARJETAS COMERCIALES DENTRO DEL FORMULARIO DE REGISTRO-->
-  
-
-  
-  
-
-  <!-- Tarjeta -->
-  <section class="tarjeta oculto" id="tarjeta">
-    <div class="delantera">
-      <div class="logo-marca" id="logo-marca">
-        <img src="visa.png" alt=""> 
-      </div>
-      <img src="chip-tarjeta.png" class="chip" alt="">
-      <div class="datos">
-        <div class="grupo" id="numero">
-          <p class="label">Número Tarjeta</p>
-          <p class="numero">#### #### #### ####</p>
-        </div>
-        <div class="flexbox">
-          <div class="grupo" id="nombre">
-            <p class="label">Nombre Tarjeta</p>
-            <p class="nombre">Jhon Doe</p>
-          </div>
-
-          <div class="grupo" id="expiracion">
-            <p class="label">Expiracion</p>
-            <p class="expiracion"><span class="mes">MM</span> / <span class="year">AA</span></p>
-          </div>
-        </div>
-      </div>
     </div>
+       </section>
 
-    <div class="trasera">
-      <div class="barra-magnetica"></div>
-      <div class="datos">
-        <div class="grupo" id="firma">
-          <p class="label">Firma</p>
-          <div class="firma"><p></p></div>
-        </div>
-        <div class="grupo" id="ccv">
-          <p class="label">CCV</p>
-          <p class="ccv"></p>
-        </div>
-      </div>
-      <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus exercitationem, voluptates illo.</p>
-      <a href="#" class="link-banco">www.tubanco.com</a>
-    </div>
- 
-  <!-- Contenedor Boton Abrir Formulario -->
-  <div class="contenedor-btn oculto">
-    <button class="btn-abrir-formulario" id="btn-abrir-formulario">
-      <i class="fas fa-plus"></i>
-    </button>
-  </div>
-</section>
+<!-----<  button onclick= "reintTarjForm()" id="reinTarjForm"
+  class="btnAcept">Reintentar</button> 
+  ESTO CUANDO SALGA EL PROMPT O ALERT Y HAY QUE REINTENTAR LA VALIDACION------------------------------>
+  
 
-  <!-- Formulario -->
-  <form action="" id="formulario-tarjeta" class="formulario-tarjeta">
-    <div class="grupo">
+<!---FORMULARIO TARJETA CON FUNCION--->
+
+
+<section class= "formulario-tarjeta oculto" id="formulario-tarjeta">
+<span>Valida tu tarjeta</span>
+
+<img src="C:\Users\natal\OneDrive\Escritorio\Proyectos Laboratoria\tarjetascolores.png" height="100" width="300"> 
+
+
+  <div class="grupo">
       <label for="inputNumero">Número Tarjeta</label>
       <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
     </div>
@@ -145,17 +87,35 @@
     </div>
     <div class="flexbox">
       <div class="grupo expira">
-        <label for="selectMes">Expiracion</label>
+        <label for="selectMes">Expiración</label>
         <div class="flexbox">
           <div class="grupo-select">
-            <select name="mes" id="selectMes">
-              <option disabled selected>Mes</option>
+            <select name="mes" id="selectMes" class="select">
+               <option disabled selected>Mes</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
             </select>
             <i class="fas fa-angle-down"></i>
           </div>
           <div class="grupo-select">
-            <select name="year" id="selectYear">
+            <select name="year" id="selectYear" class="select">
               <option disabled selected>Año</option>
+              <option>2020</option>
+                <option>2021</option>
+                <option>2022</option>
+                <option>2023</option>
+                <option>2024</option>
+                <option>2025</option>
             </select>
             <i class="fas fa-angle-down"></i>
           </div>
@@ -164,53 +124,24 @@
 
       <div class="grupo ccv">
         <label for="inputCCV">CCV</label>
-        <input type="text" id="inputCCV" maxlength="3">
+        <input type="text" id="inputCCV" class="ccv" maxlength="3">
       </div>
     </div>
-    <button type="submit" class="btn-enviar">Enviar</button>
-    <!------------------------------------------------------------>
-  <!--ACA DEBERIA IR UN DIV ESPECIAL PARA VALIDAR LA TARJETA DE CREDITO CON SU BOTON ENVIAR/VALIDAR-->
+    <button onclick="testvalidation()" class="btn btnPrimary">Validar</button>
+    <button onclick="testcancel()" class="btn btn btnCancel">Cancelar</button>
+  </div>
 
-  <div class="div-validar-tarjetaC oculto" id="validarTarjetaC"> Registro de tarjetas 
-    <label for="numtarjeta">Número de tarjeta de crédito (solo digitos 0-9)</label>
-      <input type="text" id="numtarjeta" name="numtarjeta"><br>
-  
-      <label for="codigo">Código de verificación (3 dígitos)</label>
-      <input type="text" id="vname" name="codigo"><br>
-  
-      <button onClick="botonValidarT()" class="boton-aceptar">Validar</button> 
-        <button onClick="botonCancelValT()" class="boton-cancel"> Cancelar</button> 
-          </div>
-       
-  
-  
-    <!--ENVIAR DATOS USUARIO-->
-    
-  
-    <!--ACA deberia ir un alert o mensaje con su div-->
-    <div class="alert-numok oculto" id="alertOK">
-      Tu tarjeta "XXXXXXXXX4567" ha sido validada exitosamente </div>
-  
-    <div class="alert-num-error oculto" id="alertNumError">
-      Error en número de tarjeta (solo digitos 0-9)
-    </div>
-    <!--"XXXXXXXXX4567" (formato para mostrar alert)-->
-  
-    <div class="alert-cod-error oculto" id="alertCodError">
-      Error en código de verificación (3 dígitos)
-    </div>
-    <br>
-    <div class= "oculto">
-      <button onClick= "botonOk()" class= "boton-aceptar"> Ok</button>
-    <!--OK PARA VOLVER AL FORMULARIO GENERAL CON TARJETA VALIDADA-->
-   <button onClick= "botonReint()" class= "boton-cancel"> Reintentar</button></div>
-  </div> <!--BOTON PARA INGRESAR NUEVAMENTE LOS NUMEROS (CONFIRMAR SI ES ALERT O DA EL ERROR AL MOMENTO DE TYPEARLOS)-->
-     
-  </form>
-</div>
-  
-<script type="text/javascript" src="index.js"></script>
-    
-</body>
+</section>
 
+</main>
+
+   
+    	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="index.js"></script>
+
+
+  </body>
+
+  <footer> 
+    Hecho por Natalie y Jeniffer para LABORATORIA 2020</footer>
 </html>
