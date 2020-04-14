@@ -1,5 +1,7 @@
-const validator = {
-  // ...
-};
 
-export default validator;
+//const validator = {stringNum
+  // ...
+//};
+
+//export default validator;
+
